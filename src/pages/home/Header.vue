@@ -1,13 +1,14 @@
 <template>
   <header class="header">
-      <div class="header-left icon-iconfontjiantouzuo iconfont"></div>
+      <div class="header-left  iconfont icon-fanhui"></div>
       <div class="header-title">
           输入城市/景点/游玩主题
       </div>
       <div class="header-right">
-          北京
+          <div class="header-city-wrapper">
+              <span class="header-city">北京</span>
+          </div>
       </div>
-      <i class="header-horn"></i>
   </header>
 </template>
 
@@ -18,12 +19,10 @@ export default {
 </script>
 
 <style>
-    @import "//at.alicdn.com/t/font_460484_o1xwiw4iyj02j4i.css";
     
     .header{
         height: .88rem;
         background: #00bcd4;
-        position: relative;
     }
 
     .header-left{
@@ -53,25 +52,25 @@ export default {
 		text-align: center;
 		color: #fff;
 	}
-    /*.header-right::after {
-		content: "\0020";
-		position: absolute;
-		top: .2rem;
-		right: 0;
-		width: .2rem;
-		height: .2rem;
-		background: #fff;
-        
-	}*/
-    .header-horn{
-        width: 0;
-        height:0;
-        border-left:5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 5px solid #fff;
-        position: absolute; 
+    .header-city-wrapper{
+        position: relative;
+        padding-right: .3rem;
+    }
+    .header-city{
+		display: inline-block;
+		white-space: nowrap;
+		width: 1rem;
+		text-overflow: ellipsis;
+    }
+    .header-city::after{
+        content: "\0020";
+        position: absolute;
         top: .4rem;
-        right: .1rem;
+        right: .14rem;
+        width: 0;
+        height: 0;
+        border: .1rem solid transparent;
+        border-top: .1rem solid #fff;
     }
 
 </style>

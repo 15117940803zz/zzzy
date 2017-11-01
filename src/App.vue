@@ -11,4 +11,5 @@ export default {
 
 <style>
     @import "./reset.css";
+    @import "./app/iconfont/iconfont.css";
 </style>
